@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="shortenerApp">
+<head>
+	<title>My Shortner App</title>
+	<link rel="stylesheet" href="css/shortener.css"/>
+</head>
+<body>
+<div ng-controller="ShortenerController">
+<form name="bublyForm" class="simple-form">
+Url: <input type="url" name="input" ng-model="typein.url" placeholder="http://google.com" required/>
+<span class="error" ng-show="bublyForm.input.$error.required">
+    URL Required!</span>
+   <span class="error" ng-show="bublyForm.input.$error.url">
+    Not valid url!</span>
+	<br />
+	<br />
+    <button ng-click="save(typein)">bubly-Fyyy</button>
+    
+    </form>
+	<pre>{{bubly}}</pre>    
+    </div>
+
+	<script src="http://code.angularjs.org/1.2.10/angular.min.js"></script>
+	<script src="js/ShortenerController.js"></script>
+	<script src="js/shortenerapp.js"></script>
+			  
+    </body>
+    </html>
